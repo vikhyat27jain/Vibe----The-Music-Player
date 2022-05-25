@@ -32,15 +32,15 @@ masterPlay.addEventListener('click' , ()=>{
     if(musicElement.paused || musicElement.currentTime<=0)
     {
         musicElement.play();
-        document.getElementById(songIndex).src = "/pause-solid.svg";
-        masterPlay.src="/pause-solid.svg";
+        document.getElementById(songIndex).src = "SVG icons/pause-solid.svg";
+        masterPlay.src="SVG icons/pause-solid.svg";
         masterPlay.width="12px";
     }
     else
     {
         musicElement.pause();
-        document.getElementById(songIndex).src = "/circle-play-solid.svg";
-        masterPlay.src="/circle-play-solid.svg";
+        document.getElementById(songIndex).src = "SVG icons/circle-play-solid.svg";
+        masterPlay.src="SVG icons/circle-play-solid.svg";
         masterPlay.width="23px";
     }
 })
@@ -56,7 +56,7 @@ progressBar.addEventListener('change' , ()=>{
 
 const makeAllPlays = ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
-        element.src="/circle-play-solid.svg";
+        element.src="SVG icons/circle-play-solid.svg";
     })
 }
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
@@ -66,20 +66,20 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
             progressBar.value = 0;
         makeAllPlays();
         songIndex = parseInt(e.target.id);
-        e.target.src="/pause-solid.svg";
+        e.target.src="SVG icons/pause-solid.svg";
         masterSongName.getElementsByTagName('b')[0].innerText = songs[songIndex].songName;
         masterSongMovieName.innerText = songs[songIndex].movieName; 
         masterSongSingerName.innerText = songs[songIndex].singerName;
         musicElement.src = songs[songIndex].filePath;
         musicElement.currentTime = 0;
         musicElement.play();
-        masterPlay.src = "pause-solid.svg";
+        masterPlay.src = "SVG icons/pause-solid.svg";
         }
         else
         {
-        e.target.src = "/circle-play-solid.svg"
+        e.target.src = "SVG icons/circle-play-solid.svg";
         musicElement.pause();
-        masterPlay.src = "circle-play-solid.svg";
+        masterPlay.src = "SVG icons/circle-play-solid.svg";
         }
     })
 })
@@ -99,7 +99,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     musicElement.src = songs[songIndex].filePath;
     musicElement.currentTime = 0;
     musicElement.play();
-    masterPlay.src = "pause-solid.svg";
+    masterPlay.src = "SVG icons/pause-solid.svg";
 })
 
 document.getElementById('next').addEventListener('click', ()=>{
@@ -117,5 +117,5 @@ document.getElementById('next').addEventListener('click', ()=>{
     musicElement.src = songs[songIndex].filePath;
     musicElement.currentTime = 0;
     musicElement.play();
-    masterPlay.src = "pause-solid.svg";
+    masterPlay.src = "SVG icons/pause-solid.svg";
 })

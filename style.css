@@ -38,7 +38,7 @@ nav ul li{
     margin: 20px auto;
     width: 70%;
     border-radius: 11px;
-    background-image: url(/BG.jpg);
+    background-image: url(images/BG.jpg);
     background-size: cover;
 }
 /* .songItemContainer{
@@ -79,7 +79,7 @@ nav ul li{
 .bottom{
     display: grid;
     justify-content: center;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 40% 40% 10%;
     grid-template-rows: auto auto;
     position: sticky;
     height: 15vh;

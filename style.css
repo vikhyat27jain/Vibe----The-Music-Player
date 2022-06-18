@@ -61,6 +61,9 @@ nav ul li{
     height: 90%;
     border-radius: 50px;
 }
+.songItemPlay{
+    cursor: pointer;
+}
 /* .timeStamp{
     margin: 0 23px;
 }
@@ -82,10 +85,11 @@ nav ul li{
     grid-template-columns: 40% 40% 10%;
     grid-template-rows: auto auto;
     position: sticky;
-    height: 15vh;
+    bottom: 0;
+    /* height: 15vh; */
     background-color: #143a3e;
     color: white;
-    bottom: 0;
+    
 }
 .progressBar{
     grid-column: 1/4;

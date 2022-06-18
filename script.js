@@ -53,18 +53,12 @@ musicElement.addEventListener('timeupdate' , ()=>{
 progressBar.addEventListener('change' , ()=>{
     musicElement.currentTime = progressBar.value*musicElement.duration / 100;
 })
-
-const makeAllPlays = ()=>{
-    Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
-        element.src="SVG icons/circle-play-solid.svg";
-    })
-}
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
     element.addEventListener('click', (e)=>{
         if((musicElement.paused) || (musicElement.play && songIndex != parseInt(e.target.id)))
         {
-            progressBar.value = 0;
-        makeAllPlays();
+        progressBar.value = 0;
+        document.getElementById(songIndex).src = "SVG icons/circle-play-solid.svg";
         songIndex = parseInt(e.target.id);
         e.target.src="SVG icons/pause-solid.svg";
         masterSongName.getElementsByTagName('b')[0].innerText = songs[songIndex].songName;
@@ -85,13 +79,14 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 })
 
 document.getElementById('previous').addEventListener('click', ()=>{
+    document.getElementById(songIndex).src = "SVG icons/circle-play-solid.svg";
     if(songIndex<= 0)
     {
-        songIndex=0;
+        songIndex = 0;
     }
     else
     {
-        songIndex -=1;
+        songIndex -= 1;
     }
     masterSongName.innerText = songs[songIndex].songName;
     masterSongMovieName.innerText = songs[songIndex].movieName; 
@@ -100,16 +95,18 @@ document.getElementById('previous').addEventListener('click', ()=>{
     musicElement.currentTime = 0;
     musicElement.play();
     masterPlay.src = "SVG icons/pause-solid.svg";
+    document.getElementById(songIndex).src = "SVG icons/pause-solid.svg";
 })
 
 document.getElementById('next').addEventListener('click', ()=>{
+    document.getElementById(songIndex).src = "SVG icons/circle-play-solid.svg";
     if(songIndex>= 9)
     {
-        songIndex=0;
+        songIndex = 0;
     }
     else
     {
-        songIndex +=1;
+        songIndex += 1;
     }
     masterSongName.innerText = songs[songIndex].songName;
     masterSongMovieName.innerText = songs[songIndex].movieName; 
@@ -118,4 +115,5 @@ document.getElementById('next').addEventListener('click', ()=>{
     musicElement.currentTime = 0;
     musicElement.play();
     masterPlay.src = "SVG icons/pause-solid.svg";
+    document.getElementById(songIndex).src = "SVG icons/pause-solid.svg";
 })

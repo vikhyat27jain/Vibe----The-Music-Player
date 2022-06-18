@@ -9,15 +9,15 @@ let masterSongSingerName = document.getElementById('masterSongSingerName');
 let songItems = Array.from(document.getElementsByClassName('songItem'))
 
 let songs = [
-    {songName: "Main Ki Karaan", movieName: "Lall Singh Chaddha", singerName: "Sonu Nigam", filePath: "/songs/1.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Jug Jug Jeeve", movieName: "Shiddat", singerName: "Sachet Tandon", filePath: "/songs/2.mp3", coverPath: "/covers/2.jpg"},
-    {songName: "Akhiyan Udik Diyan", movieName: "Shiddat", singerName: "Master Salim", filePath: "/songs/3.mp3", coverPath: "/covers/3.jpg"},
-    {songName: "HAri Har", movieName: "Prithviraj", singerName: "Varun Grover", filePath: "/songs/4.mp3", coverPath: "/covers/4.jpg"},
-    {songName: "Toofan", movieName: "KGF Chapter 2", singerName: "Sandesh Datta Naik", filePath: "/songs/5.mp3", coverPath: "/covers/5.jpg"},
-    {songName: "Jordaar", movieName: "Jayeshbhai Jordaar", singerName: "Vishal Dadlani", filePath: "/songs/6.mp3", coverPath: "/covers/6.jpg"},
-    {songName: "Dafa kar", movieName: "Heropanti 2", singerName: "A R Rahman", filePath: "/songs/7.mp3", coverPath: "/covers/7.jpg"},
-    {songName: "Shes On Fire", movieName: "Dhaakad", singerName: "badshah", filePath: "/songs/8.mp3", coverPath: "/covers/8.jpg"},
-    {songName: "Kaisi Baatein Karte Ho", movieName: "Modern Love Mumbai", singerName: "Sonu Nigam", filePath: "/songs/9.mp3", coverPath: "/covers/9.jpg"},
+    {songName: "Main Ki Karaan", movieName: "Lall Singh Chaddha", singerName: "Sonu Nigam", filePath: "songs/1.mp3", coverPath: "covers/1.jpg"},
+    {songName: "Jug Jug Jeeve", movieName: "Shiddat", singerName: "Sachet Tandon", filePath: "songs/2.mp3", coverPath: "covers/2.jpg"},
+    {songName: "Akhiyan Udik Diyan", movieName: "Shiddat", singerName: "Master Salim", filePath: "songs/3.mp3", coverPath: "covers/3.jpg"},
+    {songName: "HAri Har", movieName: "Prithviraj", singerName: "Varun Grover", filePath: "songs/4.mp3", coverPath: "covers/4.jpg"},
+    {songName: "Toofan", movieName: "KGF Chapter 2", singerName: "Sandesh Datta Naik", filePath: "songs/5.mp3", coverPath: "covers/5.jpg"},
+    {songName: "Jordaar", movieName: "Jayeshbhai Jordaar", singerName: "Vishal Dadlani", filePath: "songs/6.mp3", coverPath: "covers/6.jpg"},
+    {songName: "Dafa kar", movieName: "Heropanti 2", singerName: "A R Rahman", filePath: "songs/7.mp3", coverPath: "covers/7.jpg"},
+    {songName: "Shes On Fire", movieName: "Dhaakad", singerName: "badshah", filePath: "songs/8.mp3", coverPath: "covers/8.jpg"},
+    {songName: "Kaisi Baatein Karte Ho", movieName: "Modern Love Mumbai", singerName: "Sonu Nigam", filePath: "songs/9.mp3", coverPath: "covers/9.jpg"},
 ]
 
 songItems.forEach((element, i)=>{

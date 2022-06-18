@@ -10,7 +10,7 @@ let songItems = Array.from(document.getElementsByClassName('songItem'))
 
 let songs = [
     {songName: "Main Ki Karaan", movieName: "Lall Singh Chaddha", singerName: "Sonu Nigam", filePath: "/songs/1.mp3", coverPath: "/images/cover1.jpg"},
-    {songName: "Jug Jug Jeeve", movieName: "Shiddat", singerName: "Sachet Tandon", filePath: "/songs/2.mp3"},
+    {songName: "Jug Jug Jeeve", movieName: "Shiddat", singerName: "Sachet Tandon", filePath: "/songs/2.mp3", coverPath: "/covers/2.jpg"},
     {songName: "Akhiyan Udik Diyan", movieName: "Shiddat", singerName: "Master Salim", filePath: "/songs/3.mp3", coverPath: "/covers/3.jpg"},
     {songName: "HAri Har", movieName: "Prithviraj", singerName: "Varun Grover", filePath: "/songs/4.mp3", coverPath: "/covers/4.jpg"},
     {songName: "Toofan", movieName: "KGF Chapter 2", singerName: "Sandesh Datta Naik", filePath: "/songs/5.mp3", coverPath: "/covers/5.jpg"},
@@ -21,7 +21,7 @@ let songs = [
 ]
 
 songItems.forEach((element, i)=>{
-//     element.getElementsByTagName('img')[0].src = songs[i].coverPath;
+    element.getElementsByTagName('img')[0].src = songs[i].coverPath;
     element.getElementsByTagName('img')[1].id = i;
     element.getElementsByClassName('songName')[0].getElementsByTagName('b')[0].innerText = songs[i].songName;
     element.getElementsByClassName('movieName')[0].innerText = songs[i].movieName; 
